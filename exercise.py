@@ -45,8 +45,20 @@ def fibonacci_sequence(n):
     """
     Generate Fibonacci sequence up to n terms using a while loop.
     """
-    while n != 0:
-        pass
+    if n == 0:
+        return []
+    elif n == 1:
+        return [0]
+    else:
+        fib_nums = list()
+        a, b = 0, 1
+        while a < n:
+            fib_nums.append(a)
+            a ,b = b , a + b
+        return fib_nums
+
+print(fibonacci_sequence(5))
+
     
 
 def pascals_triangle(rows):
@@ -95,7 +107,11 @@ def longest_common_subsequence(str1, str2):
     """
     Find the length of the longest subsequence common to both strings.
     """
-    pass
+    counter = 0
+    for letter in str2:
+        if letter in str1:
+            counter += 1
+    return counter
 
 if __name__ == "__main__":
     pass
