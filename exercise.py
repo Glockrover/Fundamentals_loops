@@ -2,25 +2,52 @@ def sum_with_while(start, end):
     """
     Calculate the sum of all numbers between start and end (inclusive) using a while loop.
     """
-    pass
+    return sum(list(i for i in range(start, end + 1)))
 
 def count_vowels_in_string(input_string):
     """
     Count the number of vowels in a given string using a for loop.
     """
-    pass
+    counter = 0
+    for i in input_string:
+        if i.lower() in "aeiou":
+            counter += 1
+    return counter
 
 def filter_numbers(numbers):
     """
     Filter a list of numbers based on specific conditions using a for loop and conditionals.
     """
-    pass
+    positive = list()
+    even = list()
+    odd = list()
+    negetive = list()
+    dict_of_nums = {"positive":positive,
+                    "negative":negetive,
+                    "even" :even,
+                    "odd":odd}
+    
+    for number in numbers: 
+        if number % 2 == 0:
+            even.append(number) 
+        elif number % 2 != 0:
+            odd.append(number)
+    for number in numbers:
+        if str(number) in "123456789":
+            positive.append(number)
+        elif str(number) in "-1-2-3-4-5-6-7-8-9":
+            negetive.append(number)
+           
+    return dict_of_nums
+
 
 def fibonacci_sequence(n):
     """
     Generate Fibonacci sequence up to n terms using a while loop.
     """
-    pass
+    while n != 0:
+        pass
+    
 
 def pascals_triangle(rows):
     """
