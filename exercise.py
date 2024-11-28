@@ -56,11 +56,7 @@ def fibonacci_sequence(n):
             fib_nums.append(a)
             a ,b = b , a + b
         return fib_nums
-
-print(fibonacci_sequence(5))
-
-    
-
+   
 def pascals_triangle(rows):
     """
     Generate Pascal's Triangle up to a given number of rows.
@@ -83,7 +79,9 @@ def is_palindrome(input_string):
     """
     Check if a given string is a palindrome (ignoring spaces, capitalization, and punctuation).
     """
-    pass
+    word = list(letter.lower() for letter in input_string if letter.lower() in "abcdefghijklmnopqrstuvwxyz")
+    return word == word[::-1]
+
 
 def generate_permutations(input_string):
     """
